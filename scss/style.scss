@@ -1,0 +1,365 @@
+// VARIABLES:
+$color-white: #ffffff;
+$color-black: #000000;
+$color-light-black: #1a1a1a;
+$color-signal-black: #252525;
+$color-gray: #888888;
+$color-light-gray: #efefef;
+$color-dark-gray: #4a4a4a;
+$color-light-blue: #b4e2ff;
+$color-dark-blue: #299cbd;
+$color-gradient-blue: linear-gradient(0deg, #2798b9 0%, #3ab6da 100%);
+$color-yellow: #f9bf3b;
+
+// BASE =====================================================================================================
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+}
+
+.button {
+    background: linear-gradient(0deg, #2798b9 0%, #3ab6da 100%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+// ==========================================================================================================
+// PROMO ====================================================================================================
+.promo {
+    background: url(../img/main_bg.png) center center/cover no-repeat;
+    padding: 39px 0 62px 0;
+
+    .logo {
+        &__img {
+            display: block;
+            margin: 0 auto;
+        }
+        &__text {
+            margin-top: 14px;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+    }
+
+    &__logo {
+        padding-bottom: 53px;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 41px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-yellow;
+
+        &_big {
+            position: relative;
+            font-size: 80px;
+            color: $color-white;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: calc(0px + 292 * ((100vw - 320px) / (1920 - 320)));
+                height: 2px;
+                background-color: $color-white;
+            }
+            &::before {
+                left: 100%;
+                transform: translateX(-292px);
+            }
+            &::after {
+                right: 100%;
+                transform: translateX(292px);
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 28px;
+        text-align: center;
+        color: $color-white;
+
+        span {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $color-yellow;
+        }
+    }
+
+    &__button {
+        margin: 0px auto;
+        margin-top: 73px;
+        width: 313px;
+        line-height: 72px;
+    }
+
+    &__more {
+        margin-top: 73px;
+    }
+
+    .more {
+        &__text {
+            font-weight: 100;
+            font-size: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 13px;
+        }
+    }
+}
+// ==========================================================================================================
+// WAITING ==================================================================================================
+.waiting {
+    padding: 85px 0 75px 0;
+    background-color: $color-light-gray;
+
+    &__title {
+        position: relative;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-signal-black;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: 7px;
+            background-color: $color-yellow;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 44px;
+        font-size: 23px;
+        line-height: 20px;
+        text-align: center;
+        color: $color-dark-gray;
+    }
+
+    &__wrapper {
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 339px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__descr {
+        margin-top: 33px;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 21px;
+        text-align: center;
+        color: $color-dark-gray;
+    }
+}
+// ==========================================================================================================
+// OPTIMIZATION =============================================================================================
+.optimization {
+    padding: 108px 0 75px 0;
+    background-image: url(../img/woman_bg.png);
+    background-repeat: no-repeat;
+    background-position-x: calc(50% - 868px / 2 + 55px);
+    background-position-y: bottom;
+
+    &__title {
+        max-width: 750px;
+        margin: 0 0 0 auto;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $color-dark-blue;
+    }
+
+    &__text {
+        max-width: 750px;
+        margin: 0 0 15px auto;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 27px;
+        color: $color-dark-gray;
+
+        &_strong {
+            font-weight: bold;
+        }
+    }
+}
+// ==========================================================================================================
+// FINISH ===================================================================================================
+.finish {
+    padding: 86px 0 79px 0;
+    background: url(../img/second_bg.png) center center/cover no-repeat;
+
+    &__title {
+        position: relative;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-light-gray;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: 7px;
+            background-color: $color-yellow;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 204px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 118px;
+        height: 118px;
+        margin: 0 auto;
+        border-radius: 100%;
+        background: $color-light-blue;
+    }
+
+    // &__img {
+    // }
+
+    &__descr {
+        margin-top: 25px;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 20px;
+        text-align: center;
+        color: $color-light-gray;
+    }
+}
+// ==========================================================================================================
+// GIFT =====================================================================================================
+.gift {
+    padding: 88px 0;
+    background-color: $color-light-gray;
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__text {
+        margin-top: 45px;
+        font-size: 30px;
+        line-height: 43px;
+        text-align: center;
+        color: $color-signal-black;
+    }
+
+    &__button {
+        margin: 0 auto;
+        margin-top: 51px;
+        width: 313px;
+        line-height: 72px;
+    }
+}
+// ==========================================================================================================
+// WEBINAR ==================================================================================================
+.webinar {
+    padding: 88px 0 52px 0;
+    text-align: center;
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-top: 36px;
+        font-size: 30px;
+        color: $color-signal-black;
+    }
+
+    &__date {
+        margin-top: 30px;
+        font-weight: 900;
+        font-size: 36px;
+        color: $color-dark-blue;
+    }
+
+    &__text {
+        margin-top: 24px;
+        font-size: 23px;
+        color: $color-dark-gray;
+    }
+}
+// ==========================================================================================================
+// FOOTER ===================================================================================================
+.footer {
+    padding: 57px 0 69px 0;
+    background-color: $color-light-black;
+    color: $color-gray;
+
+    &__nav {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__link {
+        color: $color-gray;
+    }
+
+    &__call {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    &__tel {
+        text-decoration: none;
+        color: $color-gray;
+    }
+}
